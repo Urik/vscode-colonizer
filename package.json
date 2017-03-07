@@ -5,7 +5,7 @@
     "version": "0.0.1",
     "publisher": "UriBerman",
     "engines": {
-        "vscode": "^1.10.0"
+        "vscode": "^1.0.0"
     },
     "categories": [
         "Other"
