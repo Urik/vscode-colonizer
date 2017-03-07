@@ -10,3 +10,5 @@ In order to change the appended character, you can set the "colonizer.value" use
 
 ### Changing the key bindings  
 You can change the default key bindings by redefining the "extension.colonize" and "extension.colonizeAndBreakLine" commands.
+
+Enjoy it, and contributions are welcome!
