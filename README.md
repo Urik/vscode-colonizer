@@ -1,6 +1,8 @@
 # Colonizer
 Appends semi-colons (or whatever you want!) at the end of the current line.
 
+[Get it here!](https://marketplace.visualstudio.com/items?itemName=uriberman.colonizer)
+
 #### Its default key bindings are  
 **ctrl+;**: Append a semi-colon at the end of the line.  
 **alt+;**: Append a semi-colon and a line break at the end of the line.
@@ -11,4 +13,5 @@ In order to change the appended character, you can set the "colonizer.value" use
 ### Changing the key bindings  
 You can change the default key bindings by redefining the "extension.colonize" and "extension.colonizeAndBreakLine" commands.
 
-Enjoy it, and contributions are welcome!
+Enjoy it, and contributions are welcome!  
+https://github.com/Urik/vscode-colonizer/
