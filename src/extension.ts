@@ -1,6 +1,6 @@
 'use strict';
 
-import { ExtensionContext, commands, workspace } from 'vscode';
+import { ExtensionContext, commands, workspace, window } from 'vscode';
 import { LineAppender } from './LineAppender';
 import { AbsentEditorException } from './AbsentEditorException';
 
@@ -10,7 +10,7 @@ export function activate(context: ExtensionContext) {
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
-    const lineAppender = new LineAppender();
+    const lineAppender = new LineAppender(window.activeTextEditor);
     const value = String(workspace.getConfiguration('colonizer').get('value')) || ';';
 
     const colonizeDisposable = commands.registerCommand('extension.colonize', () => {
