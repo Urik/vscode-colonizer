@@ -11,7 +11,7 @@ export function activate(context: ExtensionContext) {
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
     const lineAppender = new LineAppender(window.activeTextEditor);
-    const value = String(workspace.getConfiguration('colonizer').get('value')) || ';';
+    const value = String(workspace.getConfiguration('colonizer').get('value'));
 
     const colonizeDisposable = commands.registerCommand('extension.colonize', () => {
         appendLine(value);
