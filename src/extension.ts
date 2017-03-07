@@ -14,15 +14,15 @@ export function activate(context: ExtensionContext) {
     const value = String(workspace.getConfiguration('colonizer').get('value'));
 
     const colonizeDisposable = commands.registerCommand('extension.colonize', () => {
-        appendLine(value);
+        runCommand(value);
     });
     const colonizeAndBreakDisposable = commands.registerCommand('extension.colonizeAndBreakLine', () => {
-        appendLine(value + '\r\n');
+        runCommand(value + '\r\n');
     });
 
     context.subscriptions.push(colonizeDisposable, colonizeAndBreakDisposable);
 
-    function appendLine(value: string) {
+    function runCommand(value: string) {
         try {
             lineAppender.append(String(value));
         } catch (err) {
