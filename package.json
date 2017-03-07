@@ -2,16 +2,17 @@
     "name": "colonizer",
     "displayName": "Colonizer",
     "description": "An extension to add colons or anything you want at the end of a line",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "uriberman",
     "engines": {
-        "vscode": "^1.0.0"
+        "vscode": "^0.1.0"
     },
     "categories": [
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.colonize"
+        "onCommand:extension.colonize",
+        "onCommand:extension.colonizeAndBreakLine"
     ],
     "main": "./out/src/extension",
     "contributes": {
