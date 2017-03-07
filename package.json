@@ -3,7 +3,7 @@
     "displayName": "Colonizer",
     "description": "An extension to add colons or anything you want at the end of a line",
     "version": "0.0.1",
-    "publisher": "UriBerman",
+    "publisher": "uriberman",
     "engines": {
         "vscode": "^1.0.0"
     },
