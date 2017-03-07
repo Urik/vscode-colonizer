@@ -10,7 +10,7 @@ export function activate(context: ExtensionContext) {
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
-    const lineAppender = new LineAppender(window.activeTextEditor);
+    const lineAppender = new LineAppender();
     const value = String(workspace.getConfiguration('colonizer').get('value'));
 
     const colonizeDisposable = commands.registerCommand('extension.colonize', () => {
@@ -24,7 +24,7 @@ export function activate(context: ExtensionContext) {
 
     function runCommand(value: string) {
         try {
-            lineAppender.append(String(value));
+            lineAppender.append(window.activeTextEditor, String(value));
         } catch (err) {
             if (err instanceof AbsentEditorException) {
                 console.error('Can not append without an editor.');
